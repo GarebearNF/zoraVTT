@@ -1,0 +1,85 @@
+{
+  "id": "zora_1_1",
+  "title": "Zora",
+  "description": "The Zora system for FoundryVTT!",
+  "authors": [
+    {
+      "name": "Syphre"
+    }
+  ],
+  "url": "https://github.com/GarebearNF/zora",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "bugs": "Replace this with a link to file issues or tickets",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/zora_1_1/assets/anvil-impact.png",
+      "thumbnail": "systems/zora_1_1/assets/anvil-impact.png"
+    }
+  ],
+  "version": "1.1.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11.315"
+  },
+  "esmodules": ["module/zora.mjs"],
+  "styles": ["css/zora.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+    "packs": [
+        {
+            "name": "fon",
+            "label": "Forces of Nature",
+            "system": "zora_1_1",
+            "path": "packs/forces-of-nature",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "name": "spells",
+            "label": "Abilities and Spells",
+            "system": "zora_1_1",
+            "path": "packs/abilities-and-spells",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+		{
+            "name": "resources",
+            "label": "Player Resources",
+            "system": "zora_1_1",
+            "path": "packs/player-resources",
+            "type": "JournalEntry",
+            "private": false,
+            "flags": {}
+        }
+	],
+  "packFolders": [],
+  "media": [
+        {
+            "type": "cover",
+            "loop": false,
+            "flags": {}
+        },
+        {
+            "type": "setup",
+            "url": "systems/zora_1_1/assets/Zora_setup.png",
+            "thumbnail": "systems/zora_1_1/assets/zora_icon.png"
+        }
+    ],
+  "socket": false,
+  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
+  "download": "This must link to a .zip file of the current version",
+  "background": "systems/zora_1_1/assets/Zora_setup.png",
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "health"
+}

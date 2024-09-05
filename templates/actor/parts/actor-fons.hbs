@@ -1,0 +1,33 @@
+<ol class='items-list'>
+  <li class='item flexrow items-header'>
+    <div class='item-name'>{{localize "LABELS.Item.FON"}}</div>
+    <div class='item-controls'>
+    </div>
+  </li>
+  {{#each fon as |item id|}}
+    <li class='item flexrow' data-item-id='{{item._id}}'>
+      <div class='item-name'>
+        <div class='item-image'>
+          <a class='rollable' data-roll-type='item'>
+            <img
+              src='{{item.img}}'
+              title='{{item.name}}'
+              width='24'
+              height='24'
+            />
+          </a>
+        </div>
+        <div class="tooltip"><h4 class="rollable" data-roll-type='item'">{{item.name}}</h4><div class="tooltiptext">{{item.system.description.plaintext}}<br><br><h2>Powers</h2>{{item.system.powers.plaintext}}</div></div>
+      </div>
+      <div class='item-formula item-prop'>{{item.system.formula}}</div>
+      <div class='item-controls'>
+        <a
+          class='item-control item-delete'
+          title='{{localize "DOCUMENT.Delete" type='F.o.N.'}}'
+        >
+          <i class='fas fa-trash'></i>
+        </a>
+      </div>
+    </li>
+  {{/each}}
+</ol>

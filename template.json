@@ -1,0 +1,196 @@
+{
+  "Actor": {
+    "types": ["witch", "npc", "demon"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 40,
+          "min": 0,
+          "max": 40,
+		  "label": "Health"
+        },
+      "abilities": {
+        "educ": {
+          "value": 5,
+		  "label": "Education"
+        },
+        "prof": {
+          "value": 5,
+		  "label": "Proficiency"
+        },
+        "train": {
+          "value": 5,
+		  "label": "Training"
+        },
+        "vita": {
+          "value": 5,
+		  "label": "Vitality"
+        }
+      },
+        "biography": "",
+		"notes": ""
+      },
+	  "manual":{
+		  "health":{
+			  "value":10,
+			  "min": 0,
+			  "max": 10,
+			  "label": "Health"
+		}
+	  }
+    },
+    "witch": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1,
+		  "max": 10,
+		  "label": "Level"
+        },
+		"skillpoints":{
+			"value": 8,
+			"label": "Skill Points"
+		},
+		"nature": ""
+      },
+	  	"faction": "",
+		"race": "",
+		"notes": ""
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
+    },
+	"demon": {
+      "templates": ["base"]
+    }
+  },
+  "Item": {
+    "types": ["equipment", "fon", "ability"],
+    "templates": {
+      "base": {
+        "description": {
+			"richtext": "",
+			"plaintext": ""
+		},
+		"flavor": "",
+		"rollnote": ""
+      },
+	  "rollable": {
+		 "primarystat": {
+			"value": "train",
+			"label": "Roll Stat"
+		},
+		"secondarystat": {
+			"value": "",
+			"label": "Secondary Stat"
+		},
+		"rollmod": "" 
+	  }
+    },
+    "equipment": {
+      "templates": ["base","rollable"],
+      "quantity": {
+		  "value": 1,
+		  "label": "Quantity"
+		  },
+      "weight": {
+		  "value": 0,
+		  "label": "Weight"
+		  },
+	  "type":{
+		  "melee": {
+			  "label": "Melee",
+			  "dtype": "String"
+		  },
+		  "ranged": {
+			  "label": "Ranged",
+			  "dtype": "String"
+		  },
+		  "thrown": {
+			  "label": "Thrown",
+			  "dtype": "String"
+		  }
+	  },
+	  "typeText": "",
+	  "formula": "1d8+@rollmod"
+    },
+    "fon": {
+      "templates": ["base"],
+	  "powers": {
+		  "richtext": "",
+		  "plaintext": ""
+	  }
+    },
+    "ability": {
+      "templates": ["base","rollable"],
+	  "level": "",
+	  "path": {
+		  "heal": {
+			  "label": "Heal",
+			  "dType": "String"
+			  },
+		  "sabotage": {
+			  "label": "Sabotage",
+			  "dType": "String"
+			  },
+		  "stealth": {
+			  "label": "Stealth",
+			  "dType": "String"
+			  },
+		  "support": {
+			  "label": "Support",
+			  "dType": "String"
+			  },
+		  "tank": {
+			  "label": "Tank",
+			  "dType": "String"
+			  }
+	  },
+	  "nature": {
+		  "air": {
+			  "label": "Air",
+			  "dType": "String"
+		  },
+		  "darkness": {
+			  "label": "Shadow",
+			  "dType": "String"
+		  },
+		  "earth": {
+			  "label": "Earth",
+			  "dType": "String"
+		  },
+		  "fire": {
+			  "label": "Fire",
+			  "dType": "String"
+		  },
+		  "ice": {
+			  "label": "Ice",
+			  "dType": "String"
+		  },
+		  "light": {
+			  "label": "Light",
+			  "dType": "String"
+		  },
+		  "volt": {
+			  "label": "Volt",
+			  "dType": "String"
+		  },
+		  "water": {
+			  "label": "Water",
+			  "dType": "String"
+		  }
+	  },
+	  "natureselect": "",
+	  "formula": "",
+	  "dice": {
+		  "value": "",
+		  "output": ""
+	  },
+	  "targets": "",
+	  "duration": "",
+	  "effect": ""
+	  
+    }
+  }
+}

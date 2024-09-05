@@ -1,0 +1,147 @@
+<form class="{{cssClass}}" autocomplete="off">
+{{#if (eq system.nature "air")}}<div class="actor-air">
+  {{else}}
+	{{#if (eq system.nature "darkness")}}<div class="actor-darkness">
+		{{else}}
+			{{#if (eq system.nature "earth")}}<div class="actor-earth">
+				{{else}}
+					{{#if (eq system.nature "fire")}}<div class="actor-fire">
+						{{else}}
+							{{#if (eq system.nature "ice")}}<div class="actor-ice">
+								{{else}}
+									{{#if (eq system.nature "light")}}<div class="actor-light">
+										{{else}}
+											{{#if (eq system.nature "volt")}}<div class="actor-volt">
+												{{else}}
+													{{#if (eq system.nature "water")}}<div class="actor-water">
+														{{else}}<div>
+														{{/if}}
+													{{/if}}
+											{{/if}}
+									{{/if}}
+							{{/if}}
+					{{/if}}
+			{{/if}}
+	{{/if}}  
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+			<h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+	</div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Summary</a>
+    <a class="item" data-tab="attributes">Attributes</a>
+	<a class="item" data-tab="effects">Effects</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+		<section class="grid grid-3col">
+			<div class="grid-span-1">
+				<div class="resource flex-group-center">
+					<label for="system.natureselect" class="resource-label">{{localize "LABELS.Item.Nature"}}</label>
+					<label for="system.natureselect" class="">{{system.nature}}</label>
+				</div>
+			</div>
+			<div class="grid-span-1">
+				<div class="resource flex-group-center">
+					<label for="system.level" class="resource-label">{{localize "LABELS.Item.Level"}}</label>
+					<label for="system.level" class="">{{system.level}}</label>
+				</div>
+			</div>
+			<div class="grid-span-1">
+				<div class="resource flex-group-center">
+					<label for="system.path" class="resource-label">{{localize "LABELS.Item.Path"}}</label>
+					<label for="system.path" class="">{{system.path}}</label>
+				</div>
+			</div>
+		</section>
+		<hr>
+		<section class="grid grid-3col">
+			<div class="grid-span-3">
+				<label for="system.description" class="resource-label">{{localize "ZORA.Item.Description"}}</label>
+				{{editor system.description.richtext target="system.description.richtext" rollData=rollData button=true owner=owner editable=editable}}
+			</div>
+		</section>
+    </div>
+
+    {{!-- Attributes Tab --}}
+    <div class="tab attributes" data-group="primary" data-tab="attributes">
+      {{!-- As you add new fields, add them in here! --}}
+		<section class="grid grid-3-col">
+			<div class="grid-span-2">
+				<div class="resource flex-group-center">
+					<label for="system.path" class="resource-label">{{localize "LABELS.Item.Path"}}</label>
+					<select name="system.path">
+						{{selectOptions path selected=system.path localize=true blank=''}}
+					</select>
+				</div>
+			</div>
+			<div class="grid-span-1">
+				<div class="resource flex-group-center">
+					<label for="system.level" class="resource-label">{{localize "LABELS.Item.Level"}}</label>
+					<input type="number" name="system.level" value="{{system.level}}"/>
+				</div>
+			</div>
+			<div class="grid-span-3">
+				<h2>Ability Details</h2>
+			</div>
+			<div class="grid-start-1 grid-span-1">
+				<div class="resource flex-group-center">
+					<label for="system.nature" class="resource-label">{{localize "LABELS.Item.Nature"}}</label>
+					<select name="system.nature">
+						{{selectOptions nature selected=system.nature localize=true blank=''}}
+					</select>
+				</div>
+				<div class="resource flex-group-center">
+					<label for="system.dice.value" class="resource-label">{{localize "LABELS.Item.Dice"}} (d8)</label>
+					<input type="text" name="system.dice.value" value="{{system.dice.value}}"/>
+				</div>
+				<div class="resource flex-group-center">
+					<label for="system.target" class="resource-label">{{localize "LABELS.Item.Targets"}}</label>
+					<input type="text" name="system.target" value="{{system.target}}"/>
+				</div>
+			</div>
+			<div class="grid-start-3 grid-span-1">
+				<div class="resource flex-group-center">
+					<label for="system.primarystat.value" class="resource-label">{{localize "ZORA.Item.PrefStat"}}</label>
+					<select name="system.primarystat.value" value="{{system.primarystat.value}}" placeholder="">
+						{{selectOptions itemStat selected=system.primarystat.value localize=true blank=''}}
+					</select>
+				</div>
+				<div class="resource flex-group-center">
+					<label for="system.secondarystat.value" class="resource-label">{{localize "ZORA.Item.SecStat"}}</label>
+					<select name="system.secondarystat.value" type="text" value="{{system.secondarystat.value}}" placeholder="">
+						{{selectOptions itemStat selected=system.secondarystat.value localize=true blank=''}}
+					</select>
+				</div>
+				<div class="resource flex-group-center">
+					<label for="system.duration" class="resource-label">{{localize "LABELS.Item.Duration"}}</label>
+					<input type="text" name="system.duration" value="{{system.duration}}"/>
+				</div>
+			</div>
+			<div class="grid-start-1 grid-span-3">
+				<div class="resource flex-group-center">
+					<label for="system.flavor" class="resource-label">{{localize "LABELS.Item.FlavorText"}}</label>
+					<input type="text" name="system.flavor" value="{{system.flavor}}"/>
+				</div>
+				<div class="resource flex-group-center">
+					<label for="system.rollnote" class="resource-label">{{localize "LABELS.Item.RollNote"}}</label>
+					<input type="text" name="system.rollnote" value="{{system.rollnote}}"/>
+				</div>
+			</div>
+		</section>
+    </div>
+	{{!-- Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+		{{> "systems/zora_1_1/templates/item/parts/item-effects.hbs"}}
+	</div>
+  </section>
+  </div>
+</form>

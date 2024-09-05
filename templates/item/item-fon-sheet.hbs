@@ -1,0 +1,37 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+		<div class="header-fields">
+		<h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </div>
+	</header>
+  {{!-- Sheet Tab Navigation --}}
+ <!--<nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Force of Nature</a>
+     <a class="item" data-tab="attributes">Attributes</a>
+  </nav>-->
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+  
+    {{!-- Description Tab --}}
+	<section>
+    <div class=" biography">
+		<h2>{{localize "ZORA.Item.Description"}}</h2>
+      {{editor system.description.richtext target="system.description.richtext" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+	<div class=" biography">
+		<h2>{{localize "ZORA.Item.Powers"}}</h2>
+		{{editor system.powers.richtext target="system.powers.richtext" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+	</section>
+    <!--{{!-- Attributes Tab --}}
+    <div class="tab attributes" data-group="primary" data-tab="attributes">
+      {{!-- As you add new fields, add them in here! --}}
+      <div class="resource">
+        <label class="resource-label">Spell Level</label>
+        <input type="text" name="system.spellLevel" value="{{system.spellLevel}}" data-dtype="Number"/>
+      </div>
+    </div>-->
+  </section>
+</form>

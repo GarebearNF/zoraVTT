@@ -1,0 +1,98 @@
+{
+  "ZORA": {
+    "Ability": {
+      "Educ": { "long": "Education", "abbr": "educ" },
+      "Prof": { "long": "Proficiency", "abbr": "prof" },
+      "Train": { "long": "Training", "abbr": "train" },
+      "Vita": { "long": "Vitality", "abbr": "vita" }
+    },
+	"Attribute": {
+		"Health": "Health",
+		"Level": "Level",
+		"SkillPoints": "Skill Points",
+		"Faction": "Faction",
+		"Race": "Race",
+		"Biography": "Biography",
+		"Notes": "Notes"
+	},
+    "SheetLabels": {
+      "Actor": "Zora Actor Sheet",
+      "Item": "Zora Item Sheet",
+	  "Settings": "Settings",
+	  "Effects": "Effects"
+    },
+    "Item": {
+      "Spell": {
+        "SpellLVL": "Level {level} Spells",
+        "AddLVL": "Add LVL {level}"
+      },
+	  "Description": "Description",
+	  "Powers": "Powers",
+	  "Quantity": "Quantity",
+	  "Weight": "Weight",
+	  "PrefStat": "Roll Stat",
+	  "SecStat": "Secondary Stat",
+	  "TypeLabel": "Type",
+	  "Type": {
+		  "Melee": "Melee",
+		  "Ranged": "Ranged",
+		  "Thrown": "Thrown"
+	  },
+	  "Nature": {
+		  "Air": "Air",
+		  "Darkness": "Shadow",
+		  "Earth":  "Earth",
+		  "Fire": "Fire",
+		  "Ice": "Ice",
+		  "Light": "Light",
+		  "Lightning": "Lightning",
+		  "Water": "Water"
+		  },
+	  "Path": {
+		  "Heal": "Heal",
+		  "Sabotage": "Sabotage",
+		  "Stealth":  "Stealth",
+		  "Support": "Support",
+		  "Tank": "Tank"
+		  }
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects"
+    }
+  },
+  "LABELS":{
+	  "Item":{
+		  "Roll": "Roll",
+		  "FON": "Force of Nature",
+		  "Nature": "Nature",
+		  "Dice": "Dice",
+		  "Targets": "Target(s)",
+		  "Duration": "Duration",
+		  "Path": "Ability Path",
+		  "Level": "Level",
+		  "FlavorText": "Flavor",
+		  "RollNote": "Roll Note"
+	  },
+	  "General":{
+		  "None": "None",
+		  "Effect": "Effect"
+	  }
+  },
+  "TYPES": {
+    "Actor": {
+      "witch": "Witch",
+      "npc": "NPC",
+	  "demon": "Demon"
+    },
+    "Item": {
+      "equipment": "Equipment",
+      "ability": "Ability",
+      "spell": "Spell",
+	  "fon": "Force of Nature"
+	  }
+    }
+  }

@@ -1,0 +1,926 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* Global styles */
+.window-app {
+  font-family: "Roboto", sans-serif;
+}
+
+.rollable:hover, .rollable:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+.grid,
+.grid-2col {
+  display: grid;
+  grid-column: span 2/span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.grid-3col {
+  grid-column: span 3/span 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4col {
+  grid-column: span 4/span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-5col {
+  grid-column: span 5/span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-6col {
+  grid-column: span 6/span 6;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-7col {
+  grid-column: span 7/span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-8col {
+  grid-column: span 8/span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-9col {
+  grid-column: span 9/span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-10col {
+  grid-column: span 10/span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid-11col {
+  grid-column: span 11/span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid-12col {
+  grid-column: span 12/span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-start-2 {
+  grid-column-start: 2;
+}
+
+.grid-start-3 {
+  grid-column-start: 3;
+}
+
+.grid-start-4 {
+  grid-column-start: 4;
+}
+
+.grid-start-5 {
+  grid-column-start: 5;
+}
+
+.grid-start-6 {
+  grid-column-start: 6;
+}
+
+.grid-start-7 {
+  grid-column-start: 7;
+}
+
+.grid-start-8 {
+  grid-column-start: 8;
+}
+
+.grid-start-9 {
+  grid-column-start: 9;
+}
+
+.grid-start-10 {
+  grid-column-start: 10;
+}
+
+.grid-start-11 {
+  grid-column-start: 11;
+}
+
+.grid-start-12 {
+  grid-column-start: 12;
+}
+
+.grid-span-2 {
+  grid-column-end: span 2;
+}
+
+.grid-span-3 {
+  grid-column-end: span 3;
+}
+
+.grid-span-4 {
+  grid-column-end: span 4;
+}
+
+.grid-span-5 {
+  grid-column-end: span 5;
+}
+
+.grid-span-6 {
+  grid-column-end: span 6;
+}
+
+.grid-span-7 {
+  grid-column-end: span 7;
+}
+
+.grid-span-8 {
+  grid-column-end: span 8;
+}
+
+.grid-span-9 {
+  grid-column-end: span 9;
+}
+
+.grid-span-10 {
+  grid-column-end: span 10;
+}
+
+.grid-span-11 {
+  grid-column-end: span 11;
+}
+
+.grid-span-12 {
+  grid-column-end: span 12;
+}
+
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-group-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.flex-group-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.flexshrink {
+  flex: 0;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flexlarge {
+  flex: 2;
+}
+
+.ability.flexrow.flex-group-center {
+    display: flow;
+}
+
+#skillpoints {
+    width:25%;
+    min-width: 15%;
+    margin: auto;
+}
+
+#actorHealth {
+    align-items: center;
+}
+
+.align-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.align-center {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styles limited to boilerplate sheets */
+.zora_1_1 .item-form {
+  font-family: "Roboto", sans-serif;
+}
+.sheet header.sheet-header{
+   align-items: start !important;
+}
+.zora_1_1 .sheet-header {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.zora_1_1 .sheet-header .profile-img {
+  flex: 0 0 150px;
+  height: 150px;
+  margin-right: 10px;
+  border-width: 2px;
+  border-style: ridge;
+}
+.zora_1_1 .sheet-header .header-fields {
+  flex: 1;
+}
+.zora_1_1 .sheet-header h1.charname {
+  height: 50px;
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: 0;
+}
+.zora_1_1 .sheet-header h1.charname input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.sheet-body select{
+  width: 100%;
+}
+.zora_1_1 .sheet-tabs {
+  flex: 0;
+}
+.zora .sheet-body,
+.zora_1_1 .sheet-body,
+.zora_1_1 .sheet-body .tab,
+.zora_1_1 .sheet-body .tab .editor {
+  max-height: 70%;
+}
+.tox.tox-tinymce .tox-edit-area__iframe, .tox-sidebar-wrap {
+    background: transparent;
+    background-color: white !important;
+}
+.tox .tox-edit-area__iframe {
+    width: 96%;
+}
+.sheet .editor-content {
+    max-height: 300px;
+    min-height: 75px;
+}
+.sheet-body h2{
+    margin-top: 15px
+}
+
+.sheet-body .tab h2 {
+    margin-top: 0px
+}
+.tox.tox-tinymce{
+  min-height: 200px;
+}
+ .tox .tox-editor-container {
+  background: #fff;
+}
+.tox .tox-edit-area {
+  padding: 0 10px;
+}
+.resource-label {
+  font-weight: bold;
+  display: flow;
+}
+.zora_1_1 .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+.zora_1_1 .items-header > * {
+  font-size: 14px;
+  text-align: center;
+}
+.zora_1_1 .items-header .item-name {
+  font-weight: bold;
+  padding-left: 5px;
+  text-align: left;
+  display: flex;
+}
+.zora .items-list, 
+.zora_1_1 .items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: #444;
+}
+.zora .items-list .item-list,
+.zora_1_1 .items-list .item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.zora .items-list .item-name,
+.zora_1_1 .items-list .item-name {
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  display: flex;
+}
+.zora .items-list .item-name h3, .zora .items-list .item-name h4,
+.zora_1_1 .items-list .item-name h3, .zora_1_1 .items-list .item-name h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.zora .items-list .item-controls,
+.zora_1_1 .items-list .item-controls {
+  display: flex;
+  flex: 0 0 100px;
+  justify-content: flex-end;
+}
+.zora .items-list .item-controls a,
+.zora_1_1 .items-list .item-controls a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 6px;
+}
+.zora .items-list .item,
+.zora_1_1 .items-list .item {
+  align-items: center;
+  padding: 0 2px;
+  border-bottom: 1px solid #c9c7b8;
+}
+.zora .items-list .item:last-child,
+.zora_1_1 .items-list .item:last-child {
+}
+.zora .items-list .item .item-name,
+.zora_1_1 .items-list .item .item-name {
+  color: #191813;
+}
+.zora .items-list .item .item-name .item-image,
+.zora_1_1 .items-list .item .item-name .item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+}
+.zora .items-list .item-prop,
+.zora_1_1 .items-list .item-prop {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.zora .items-list .items-header,
+.zora_1_1 .items-list .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+.zora .items-list .items-header > *,
+.zora_1_1 .items-list .items-header > * {
+  font-size: 12px;
+  text-align: center;
+}
+.zora .items-list .items-header .item-name,
+.zora_1_1 .items-list .items-header .item-name {
+  padding-left: 5px;
+  text-align: left;
+}
+.zora_1_1 .item-formula {
+  flex: 0 0 100px;
+  padding: 0 8px;
+}
+.zora .effects .item .effect-source,
+.zora .effects .item .effect-duration,
+.zora .effects .item .effect-controls,
+.zora_1_1 .effects .item .effect-source,
+.zora_1_1 .effects .item .effect-duration,
+.zora_1_1 .effects .item .effect-controls {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.zora .effects .item .effect-controls,
+.zora_1_1 .effects .item .effect-controls {
+  border: none;
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  max-width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  padding: 15px;
+  border-radius: 6px;
+  position: fixed !important;
+  text-wrap: wrap;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip .tooltip-subtext{
+   font-size: .65rem
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.hidden { 
+    display: none !important; 
+}
+#pause img {
+    --fa-animation-duration: 15s;
+}
+img.fa-spin {
+    content: url(/systems/zora_1_1/assets/zora_icon.png);
+}
+#logo {
+	content:url(/systems/zora_1_1/assets/zora_icon.png);
+	height: 115px;
+	width:115px;
+        margin-bottom: -5px;
+        margin-top: -5px
+}
+.zora_1_1 .biography h2{
+    padding-top: 1rem;
+}
+.item-card img{
+    border-radius: 5px;
+}
+.item-card .description{
+    padding: 0rem 0.35rem !important;
+}
+.item-card .description p{
+    margin: 0rem;
+    line-height: 1rem;
+}
+.item-card .subtitle{
+    font-style: italic;
+    line-height: 1rem
+}
+.item-card .roll-note{
+    font-weight: bold;
+    line-height: 1rem;
+    text-align: center;
+}
+.card-footer{
+    line-height: 1rem;
+    font-size: .65rem;
+    background: dimgray;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+.collapsible.collapsed label .fa-caret-down {
+  transform: rotate(-90deg);
+}
+.collapsible.collapsed .collapsible-content {
+  grid-template-rows: 0fr;
+}
+.collapsible .fa-caret-down {
+  transition: transform 250ms ease;
+}
+.collapsible .collapsible-content {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 250ms ease;
+}
+.collapsible .collapsible-content > .wrapper {
+  overflow: hidden;
+}
+:is(.card-tray, .effects-tray) {
+  margin-top: 0.125rem;
+}
+:is(.card-tray, .effects-tray):has(.effects:empty) {
+  display: none;
+}
+:is(.card-tray, .effects-tray).damage-tray {
+  margin-block-start: 8px;
+}
+:is(.card-tray, .effects-tray) > label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: var(--font-size-11);
+}
+:is(.card-tray, .effects-tray) > label > span {
+  flex: none;
+}
+:is(.card-tray, .effects-tray) > label .fa-bolt,
+:is(.card-tray, .effects-tray) > label .fa-heart-crack {
+  color: var(--color-text-light-6);
+}
+:is(.card-tray, .effects-tray) > label .fa-caret-down {
+  transition: all 250ms ease;
+}
+:is(.card-tray, .effects-tray) > label::before,
+:is(.card-tray, .effects-tray) > label::after {
+  content: "";
+  flex-basis: 50%;
+  border-top: 1px dotted var(--dnd5e-color-gold);
+  align-self: center;
+}
+:is(.card-tray, .effects-tray) .target-source-control {
+  justify-content: space-evenly;
+  gap: 4px;
+  margin-block-start: 1px;
+}
+:is(.card-tray, .effects-tray) .target-source-control:not([hidden]) {
+  display: flex;
+}
+:is(.card-tray, .effects-tray) .target-source-control button {
+  width: unset;
+  font-size: var(--font-size-10);
+}
+:is(.card-tray, .effects-tray) .target-source-control button:hover,
+:is(.card-tray, .effects-tray) .target-source-control button:focus,
+:is(.card-tray, .effects-tray) .target-source-control button[aria-pressed="true"] {
+  box-shadow: none;
+  text-shadow: 0 0 5px var(--color-shadow-highlight);
+}
+:is(.card-tray, .effects-tray) .effects,
+:is(.card-tray, .effects-tray) .targets {
+  display: flex;
+  flex-direction: column;
+}
+:is(.card-tray, .effects-tray) .effects .effect,
+:is(.card-tray, .effects-tray) .targets .effect,
+:is(.card-tray, .effects-tray) .effects .target,
+:is(.card-tray, .effects-tray) .targets .target {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid var(--color-border-light-1);
+}
+:is(.card-tray, .effects-tray) .effects .effect:last-child,
+:is(.card-tray, .effects-tray) .targets .effect:last-child,
+:is(.card-tray, .effects-tray) .effects .target:last-child,
+:is(.card-tray, .effects-tray) .targets .target:last-child {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+:is(.card-tray, .effects-tray) .effects .effect > img,
+:is(.card-tray, .effects-tray) .targets .effect > img,
+:is(.card-tray, .effects-tray) .effects .target > img,
+:is(.card-tray, .effects-tray) .targets .target > img {
+  width: 32px;
+  height: 32px;
+}
+:is(.card-tray, .effects-tray) .effects .effect .name-stacked,
+:is(.card-tray, .effects-tray) .targets .effect .name-stacked,
+:is(.card-tray, .effects-tray) .effects .target .name-stacked,
+:is(.card-tray, .effects-tray) .targets .target .name-stacked {
+  flex: 1;
+}
+:is(.card-tray, .effects-tray) .effects > .none,
+:is(.card-tray, .effects-tray) .targets > .none {
+  text-align: center;
+  margin-block: 4px;
+}
+:is(.card-tray, .effects-tray) .effects .effect > button {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 0 4px;
+  font-size: var(--font-size-12);
+}
+:is(.card-tray, .effects-tray) .targets .target {
+  flex-wrap: wrap;
+}
+:is(.card-tray, .effects-tray) .targets .target .subtitle {
+  display: flex;
+  gap: 4px;
+}
+:is(.card-tray, .effects-tray) .targets .target .change-source {
+  width: 13px;
+  height: 13px;
+  --icon-size: 13px;
+  padding: 0;
+  border-radius: 4px;
+  display: grid;
+  grid-template-areas: "overlay";
+  font-size: inherit;
+}
+:is(.card-tray, .effects-tray) .targets .target .change-source > * {
+  grid-area: overlay;
+}
+:is(.card-tray, .effects-tray) .targets .target .change-source > dnd5e-icon {
+  display: block;
+}
+:is(.card-tray, .effects-tray) .targets .target .change-source > i {
+  color: red;
+}
+:is(.card-tray, .effects-tray) .targets .target .change-source:not([aria-pressed="true"]) .fa-slash {
+  display: none;
+}
+:is(.card-tray, .effects-tray) .targets .target .change-source:not([aria-pressed="mixed"]) .fa-arrow-turn-down {
+  display: none;
+}
+:is(.card-tray, .effects-tray) .targets .target .change-source .fa-arrow-turn-down {
+  position: relative;
+  left: 8px;
+  top: -1px;
+}
+:is(.card-tray, .effects-tray) .targets .target .calculated {
+  padding-inline-end: 4px;
+  font-size: var(--font-size-14);
+  font-weight: bold;
+  color: var(--dnd5e-color-application-damage);
+}
+:is(.card-tray, .effects-tray) .targets .target .calculated.healing {
+  color: var(--dnd5e-color-application-healing);
+}
+:is(.card-tray, .effects-tray) .targets .target .calculated.temp {
+  color: var(--dnd5e-color-application-temp);
+}
+:is(.card-tray, .effects-tray) .targets .target .damage-multipliers {
+  flex: 1 0 calc(100% - 6px);
+  display: grid;
+  grid-template-columns: auto repeat(6, 1fr);
+  gap: 2px;
+  margin-inline: 3px;
+  font-size: var(--font-size-11);
+}
+:is(.card-tray, .effects-tray) .targets .target .damage-multipliers::before {
+  content: "\f00d";
+  align-self: center;
+  padding-inline-end: 2px;
+  color: var(--dnd5e-color-tan);
+  font-family: var(--font-awesome);
+  font-weight: 900;
+}
+:is(.card-tray, .effects-tray) .targets .target .damage-multipliers button {
+  width: 100%;
+  border-radius: 3px;
+  padding: 2px;
+  font-size: inherit;
+  line-height: unset;
+  cursor: pointer;
+}
+:is(.card-tray, .effects-tray) .targets .target .damage-multipliers button::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: var(--dnd5e-color-faint);
+}
+:is(.card-tray, .effects-tray) .targets .target .damage-multipliers button[aria-pressed="true"] {
+  border-color: var(--dnd5e-color-crimson);
+}
+:is(.card-tray, .effects-tray) .targets .target .damage-multipliers button[aria-pressed="true"]::after {
+  background-color: var(--dnd5e-color-crimson);
+}
+:is(.card-tray, .effects-tray) .wrapper > button {
+  margin: 3px;
+  width: calc(100% - 6px);
+  margin-block-start: 6px;
+}
+:root {
+    --color-text-hyperlink: #a100ff;
+    --color-shadow-highlight: #a100ff;
+    --color-border-highlight-alt: #6d00ad;
+    --color-border-highlight: #a100ff;
+    --color-shadow-primary: #6d00ad;
+    --color-scrollbar: #6d00ad;
+}
+h3.item-name.effect-name.flexrow {
+    border-bottom: none;
+}
+.actor section.window-content {
+    padding: 0px !important;
+}
+.actor header.sheet-header, .actor section.sheet-body, .item section.sheet-body{
+    padding: 8px;
+}
+.actor .sheet-tabs .tabs{
+    margin: 4px 8px;
+}
+
+/* Air F.o.N. Styling */
+.actor-air {
+    --color-shadow-primary: #B2A704;
+    --color-scrollbar: #B2A704
+    scrollbar-color: #B2A704 !important;
+
+}
+.actor-air input, .actor-air select, .actor-air .items-list .item, .actor-air .profile-img, .actor-air .items-list .items-header, .actor-air nav.sheet-tabs {border-color: #B2A704;}
+.actor-air .items-list .items-header .item-name, .actor-air .items-list .items-header .effect-source, .actor-air .items-list .items-header .item-controls, .actor-air .items-list .items-header .item-formula {color: #191813;}
+.actor-air .items-list .items-header, .actor-air input[type="range"]::-webkit-slider-thumb {background-color: #B2A704;}
+.actor-air .rollable:hover, .actor-air .rollable:focus{
+    text-shadow: 0 0 10px #B2A704;
+    cursor: pointer;
+}
+.actor .actor-air {
+    background: url(/systems/zora_1_1/assets/Zora_Background_Overlay_Transparent.png);
+    background-position-x: 250px;
+    background-position-y: 400px;
+    background-blend-mode: soft-light;
+    background-color: rgba(178,167,4,0.15);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Darkness F.o.N. Styling */
+.actor-darkness {
+    --color-shadow-primary: #B45802;
+}
+.actor-darkness input, .actor-darkness select, .actor-darkness .items-list .item, .actor-darkness .profile-img, .actor-darkness .items-list .items-header, .actor-darkness nav.sheet-tabs {border-color: #B45802;}
+.actor-darkness .items-list .items-header .item-name, .actor-darkness .items-list .items-header .effect-source, .actor-darkness .items-list .items-header .item-controls, .actor-darkness .items-list .items-header .item-formula {color: #191813;}
+.actor-darkness .items-list .items-header, .actor-darkness input[type="range"]::-webkit-slider-thumb {background-color: #B45802;}
+.actor-darkness .rollable:hover, .actor-darkness .rollable:focus{
+    text-shadow: 0 0 10px #B45802;
+    cursor: pointer;
+}
+.actor .actor-darkness {
+    background: url(/systems/zora_1_1/assets/Zora_Background_Overlay_Transparent.png);
+    background-position-x: 250px;
+    background-position-y: 400px;
+    background-blend-mode: soft-light;
+    background-color: rgba(180,88,2,0.15);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Earth F.o.N. Styling */
+.actor-earth {
+    --color-shadow-primary: #07B30F;
+}
+.actor-earth input, .actor-earth select, .actor-earth .items-list .item, .actor-earth .profile-img, .actor-earth .items-list .items-header, .actor-earth nav.sheet-tabs {border-color: #07B30F;}
+.actor-earth .items-list .items-header .item-name, .actor-earth .items-list .items-header .effect-source, .actor-earth .items-list .items-header .item-controls, .actor-earth .items-list .items-header .item-formula {color: #191813;}
+.actor-earth .items-list .items-header, .actor-earth input[type="range"]::-webkit-slider-thumb {background-color: #07B30F;}
+.actor-earth .rollable:hover, .actor-earth .rollable:focus{
+    text-shadow: 0 0 10px #07B30F;
+    cursor: pointer;
+}
+.actor .actor-earth {
+    background: url(/systems/zora_1_1/assets/Zora_Background_Overlay_Transparent.png);
+    background-position-x: 250px;
+    background-position-y: 400px;
+    background-blend-mode: soft-light;
+    background-color: rgba(7,179,15,0.15);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* Demon Styling */
+.actor-demon{
+  padding: 10px;
+  box-shadow: inset 0 0 20px 10px black;
+  background-color: rgba(50, 50, 50, 0.15);
+  --color-shadow-primary: #353535;
+}
+.actor-demon .biography h2{
+    border-bottom: solid 1px black;
+}
+.actor-demon nav{
+    border-bottom: solid 1px black !important;
+    border-top: solid 1px black !important;
+}
+.actor-demon .rollable:hover, .actor-demon .rollable:focus{
+    text-shadow: 0 0 10px #353535;
+    cursor: pointer;
+}
+/* Fire F.o.N. Styling */
+.actor-fire {
+    --color-shadow-primary: #B21E1D;
+}
+.actor-fire input, .actor-fire select, .actor-fire .items-list .item, .actor-fire .profile-img, .actor-fire .items-list .items-header, .actor-fire nav.sheet-tabs {border-color: #B21E1D;}
+.actor-fire .items-list .items-header .item-name, .actor-fire .items-list .items-header .effect-source, .actor-fire .items-list .items-header .item-controls, .actor-fire .items-list .items-header .item-formula {color: #e1d259;}
+.actor-fire .items-list .items-header, .actor-fire input[type="range"]::-webkit-slider-thumb {background-color: #B21E1D;}
+.actor-fire .rollable:hover, .actor-fire .rollable:focus{
+    text-shadow: 0 0 10px #B21E1D;
+    cursor: pointer;
+}
+.actor .actor-fire {
+    background: url(/systems/zora_1_1/assets/Zora_Background_Overlay_Transparent.png);
+    background-position-x: 250px;
+    background-position-y: 400px;
+    background-blend-mode: soft-light;
+    background-color: rgba(178,30,29,0.15);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Ice F.o.N. Styling */
+.actor-ice {
+    --color-shadow-primary: #5c5c5c;
+}
+.actor-ice input, .actor-ice select, .actor-ice .items-list .item, .actor-ice .profile-img, .actor-ice .items-list .items-header, .actor-ice nav.sheet-tabs {border-color: #7d7d7d;}
+.actor-ice .items-list .items-header .item-name, .actor-ice .items-list .items-header .effect-source, .actor-ice .items-list .items-header .item-controls, .actor-ice .items-list .items-header .item-formula {color: #191813;}
+.actor-ice .items-list .items-header, .actor-ice input[type="range"]::-webkit-slider-thumb {background-color: #B4B4B5;}
+.actor-ice .rollable:hover, .actor-ice .rollable:focus{
+    text-shadow: 0 0 10px #B4B4B5;
+    cursor: pointer;
+}
+.actor .actor-ice {
+    background: url(/systems/zora_1_1/assets/Zora_Background_Overlay_Transparent.png);
+    background-position-x: 250px;
+    background-position-y: 400px;
+    background-blend-mode: soft-light;
+    background-color: rgba(180,180,181,0.55);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Light F.o.N. Styling */
+.actor-light {
+    --color-shadow-primary: #B12C7A;
+}
+.actor-light input, .actor-light select, .actor-light .items-list .item, .actor-light .profile-img, .actor-light .items-list .items-header, .actor-light nav.sheet-tabs {border-color: #B12C7A;}
+.actor-light .items-list .items-header .item-name, .actor-light .items-list .items-header .effect-source, .actor-light .items-list .items-header .item-controls, .actor-light .items-list .items-header .item-formula {color: #191813;}
+.actor-light .items-list .items-header, .actor-light input[type="range"]::-webkit-slider-thumb {background-color: #B12C7A;}
+.actor-light .rollable:hover, .actor-light .rollable:focus{
+    text-shadow: 0 0 10px #B12C7A;
+    cursor: pointer;
+}
+.actor .actor-light {
+    background: url(/systems/zora_1_1/assets/Zora_Background_Overlay_Transparent.png);
+    background-position-x: 250px;
+    background-position-y: 400px;
+    background-blend-mode: soft-light;
+    background-color: rgba(177,44,122,0.25);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Volt F.o.N. Styling */
+.actor-volt {
+    --color-shadow-primary: #5E09B2;
+}
+.actor-volt input, .actor-volt select, .actor-volt .items-list .item, .actor-volt .profile-img, .actor-volt .items-list .items-header, .actor-volt nav.sheet-tabs {border-color: #5E09B2;}
+.actor-volt .items-list .items-header .item-name, .actor-volt .items-list .items-header .effect-source, .actor-volt .items-list .items-header .item-controls, .actor-volt .items-list .items-header .item-formula  {color: white;}
+.actor-volt .items-list .items-header, .actor-volt input[type="range"]::-webkit-slider-thumb {background-color: #5E09B2;}
+.actor-volt .rollable:hover, .actor-volt .rollable:focus{text-shadow: 0 0 10px #5E09B2; cursor: pointer;}
+.actor-volt .window-app .window-content::before {
+    opacity: .75;
+}
+.actor .actor-volt {
+    background: url(/systems/zora_1_1/assets/Zora_Background_Overlay_Transparent.png);
+    background-position-x: 250px;
+    background-position-y: 400px;
+    background-blend-mode: soft-light;
+    background-color: rgba(94,9,178,0.15);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Water F.o.N. Styling */
+.actor-water {
+    --color-shadow-primary: #0970B4;
+}
+.actor-water input, .actor-water select, .actor-water .items-list .item, .actor-water .profile-img, .actor-water .items-list .items-header, .actor-water nav.sheet-tabs {border-color: #0970B4;}
+.actor-water .items-list .items-header .item-name, .actor-water .items-list .items-header .effect-source, .actor-water .items-list .items-header .item-controls, .actor-water .items-list .items-header .item-formula {color: white;}
+.actor-water .items-list .items-header, .actor-water input[type="range"]::-webkit-slider-thumb{background-color: #0970B4;}
+.actor-water .rollable:hover, .actor-water .rollable:focus{
+    text-shadow: 0 0 10px #0970B4;
+    cursor: pointer;
+}
+.actor .actor-water {
+    background: url(/systems/zora_1_1/assets/Zora_Background_Overlay_Transparent.png);
+    background-position-x: 250px;
+    background-position-y: 400px;
+    background-blend-mode: soft-light;
+    background-color: rgba(9,112,180,0.25);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+

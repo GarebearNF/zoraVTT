@@ -1,0 +1,99 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">{{localize "ZORA.Item.Description"}}</a>
+    <a class="item" data-tab="settings">{{localize "ZORA.SheetLabels.Settings"}}</a>
+   <!-- <a class="item" data-tab="effects">Effects</a> -->
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+		<section class="grid grid-4col">
+			<div class="grid-start-1 grid-span-1">
+			<div class="resource flex-group-center">
+			  <label for="system.typeText" class="resource-label">{{localize "ZORA.Item.Quantity"}}</label>
+			  <div class="resource-content flexrow flex-center flex-between" style="padding: 0px 15%;">
+			  <span>{{system.quantity.value}}</span>
+			  </div>
+			</div>
+			<div class="resource flex-group-center">
+			  <label for="system.quantity.value" class="resource-label">{{localize "ZORA.Item.Quantity"}}</label>
+			  <div class="resource-content flexrow flex-center flex-between" style="padding: 0px 15%;">
+			  <span>{{system.quantity.value}}</span>
+			  </div>
+			</div>
+			<div class="resource flex-group-center">
+			  <label for="system.weight.value" class="resource-label">{{localize "ZORA.Item.Weight"}}</label>
+			  <div class="resource-content flexrow flex-center flex-between" style="padding: 0px 15%;">
+			  <span>{{system.weight.value}}</span>
+			  </div>
+			</div>
+			</div>
+			<div class="grid-start-2 grid-span-3">
+				<h2>{{localize "ZORA.Item.Description"}}</h2>
+				{{editor system.description.richtext target="system.description.richtext" rollData=rollData button=true owner=owner editable=editable}}
+			</div>
+		</section>
+    </div>
+
+    {{!-- Settings Tab --}}
+    <div class="tab attributes" data-group="primary" data-tab="settings">
+		<section class="grid grid-3col">
+			<div class="grid-span-3">
+				<h2>Item Details</h2>
+			</div>
+			<div class="resource flex-group-center">
+					<label for="system.quantity.value" class="resource-label">{{localize "ZORA.Item.Quantity"}}</label>
+					<input name="system.quantity.value" type="number" value="{{system.quantity.value}}" placeholder=""/>
+			</div>
+			<div class="resource flex-group-center">
+				<label for="system.weight.value" class="resource-label">{{localize "ZORA.Item.Weight"}}</label>
+				<input name="system.weight.value" type="number" value="{{system.weight.value}}" placeholder=""/>
+			</div>
+		</section>
+		<section class="grid grid-5col">
+			<div class="grid-span-5">
+				<h2>Equipment Details</h2>
+			</div>
+			<div class="grid-start-1 grid-span-2">
+				<div class="resource flex-group-center">
+					<label for="system.type" class="resource-label">{{localize "ZORA.Item.TypeLabel"}}</label>
+					<select name="system.type">
+						{{selectOptions equipType selected=system.type localize=true blank=''}}
+					</select>
+				</div>
+			</div>
+			<div class="grid-start-4 grid-span-2">
+				<div class="resource flex-group-center">
+					<label for="system.primarystat.value" class="resource-label">{{localize "ZORA.Item.PrefStat"}}</label>
+					<select name="system.primarystat.value" value="{{system.primarystat.value}}" placeholder="">
+						{{selectOptions itemStat selected=system.primarystat.value localize=true blank=''}}
+					</select>
+				</div>
+				<div class="resource flex-group-center">
+					<label for="system.secondarystat.value" class="resource-label">{{localize "ZORA.Item.SecStat"}}</label>
+					<select name="system.secondarystat.value" type="text" value="{{system.secondarystat.value}}" placeholder="">
+						{{selectOptions itemStat selected=system.secondarystat.value localize=true blank=''}}
+					</select>
+				</div>
+			</div>
+		</section>
+    </div>
+
+   <!-- {{!-- Effects Tab --}}
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/zora_1_1/templates/item/parts/item-effects.hbs"}}
+    </div>-->
+  </section>
+
+</form>

@@ -82,5 +82,9 @@
   "background": "systems/zora_1_1/assets/Zora_setup.png",
   "gridDistance": 5,
   "gridUnits": "ft",
+  "grid": {
+        "distance": 3,
+        "units": "m"
+    },
   "primaryTokenAttribute": "health"
 }

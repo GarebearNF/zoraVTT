@@ -76,7 +76,8 @@
         }
     ],
   "socket": false,
-  "manifest": "https://github.com/GarebearNF/zoraVTT/tree/main",
+  "url": "https://github.com/GarebearNF/zoraVTT/tree/main",
+  "manifest": "https://github.com/GarebearNF/zoraVTT/raw/zoraVTT/system.json",
   "download": "https://www.dropbox.com/scl/fi/puntdw3igw7g8gx9qmzrr/zora_1_1.zip?rlkey=phw2bgdkjf9f8769qh2pqursr&st=rsxdqr2k&dl=1",
   "background": "systems/zora_1_1/assets/Zora_setup.png",
   "gridDistance": 5,

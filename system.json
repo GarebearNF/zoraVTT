@@ -12,14 +12,7 @@
   "readme": "README.md",
   "bugs": "Replace this with a link to file issues or tickets",
   "changelog": "CHANGELOG.md",
-  "media": [
-    {
-      "type": "setup",
-      "url": "systems/zora_1_1/assets/anvil-impact.png",
-      "thumbnail": "systems/zora_1_1/assets/anvil-impact.png"
-    }
-  ],
-  "version": "1.1.0",
+  "version": "1.1.2",
   "compatibility": {
     "minimum": "12",
     "verified": "12.331"
@@ -80,8 +73,8 @@
   "manifest": "https://github.com/GarebearNF/zoraVTT/raw/main/system.json",
   "download": "https://www.dropbox.com/scl/fi/puntdw3igw7g8gx9qmzrr/zora_1_1.zip?rlkey=phw2bgdkjf9f8769qh2pqursr&st=rsxdqr2k&dl=1",
   "background": "systems/zora_1_1/assets/Zora_setup.png",
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "gridDistance": 3,
+  "gridUnits": "m",
   "grid": {
         "distance": 3,
         "units": "m"
